@@ -15,14 +15,14 @@ data = json.dumps(data)
 print(data)
 
 
+# send_request = requests.post(heroku_url, data)
+# print(send_request)
+# print(send_request.json())
+
+r_survey = requests.post(heroku_url, data)
+print(r_survey)
+
 send_request = requests.post(heroku_url, data)
 print(send_request)
+
 print(send_request.json())
-
-# r_survey = requests.post(url, data)
-# print(r_survey)
-
-# send_request = requests.post(url, data)
-# print(send_request)
-
-# print(send_request.json())
