@@ -57,11 +57,12 @@
 import requests
 import json
 import pandas as pd
-url = 'https://titanic-flask-model-js.herokuapp.com/'
+# url = 'https://titanic-flask-model-js.herokuapp.com/'
+url = 'http://127.0.0.1:5000'
 data = {"Pclass":3, "Age":2, "SibSp":1, "Fare":50}
 response = requests.post(url, json.dumps(data))
 data.update((x, [y]) for x, y in data.items())
 print(data)
 data_df = pd.DataFrame.from_dict(data)
 print(data_df)
-# print(response.json())
+print(response.json())
